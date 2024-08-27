@@ -1,0 +1,8 @@
+jieba>=0.42.1
+datasets>=2.19.1
+peft>=0.11.0
+deepspeed>=0.13.3
+nltk==3.8.1
+ruamel.yaml
+rouge_chinese
+
