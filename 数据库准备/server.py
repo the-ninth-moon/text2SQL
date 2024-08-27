@@ -6,11 +6,11 @@ app = FastAPI()
 
 # 配置MySQL数据库连接
 db_config = {
-    "host":"47.98.41.200",
-    "user":"root",  # 替换为你的MySQL用户名
-    "password":"@text2SQL",  # 替换为你的MySQL密码
-    "database":"text2sql",
-    "charset":'utf8mb4'
+    "host":"*****",
+    "user":"*****",  # 替换为你的MySQL用户名
+    "password":"****",  # 替换为你的MySQL密码
+    "database":"****",
+    "charset":'*****'
 }
 
 
@@ -29,7 +29,7 @@ def format_and_validate_sql(sql: str):
         sql = sql.strip() + ';'
 
     # 检查SQL语句是否包含DELETE或DROP关键字
-    forbidden_keywords = ['DELETE', 'DROP']
+    forbidden_keywords = ['DELETE', 'DROP','delete','drop']
     if any(keyword in sql.upper() for keyword in forbidden_keywords):
         raise HTTPException(status_code=400, detail="Forbidden SQL operation detected!")
 
